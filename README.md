@@ -113,7 +113,7 @@ def generate_password(length=12):
 
 print(generate_password())
 
-
+SESSION 2 HW
 import numpy as np
 arr=["1","2","3","4","5"]
 a=np.array(arr)
