@@ -174,3 +174,131 @@ print(df)
 AI is a branch of computer science that focuses on creating intelligent systems capable of reasoning, learning, and decision-making.Artificial Intelligence (AI) is a field of computer science that enables machines to simulate human intelligence, including reasoning, learning, and decision-making. Key AI techniques include Machine Learning (ML), which allows machines to learn from data, and Natural Language Processing (NLP), which helps computers understand human language. AI is also used in automation, robotics, and machine vision for improving efficiency and productivity. Its applications span various fields, including astronomy, healthcare, gaming, finance, and cybersecurity. AI enhances medical diagnoses, automates financial processes, and strengthens data security. However, challenges such as ethical concerns, the complexity of human language, and security risks remain. Despite its limitations, AI continues to transform industries, making processes smarter and more efficient.
 
 Chat GPT provides an insightful and useful analysis coming straight to the point without external disturbances and summarized everything by dividing into sectors and defining it in a line which saves time and is easy to understand.Other AI reponses were not that satisfactory because they seemed complex and external information was included .The missing points are it fails to justify or provide examples.
+
+
+
+BROKEN CODE
+
+
+import numpy as np
+import pandas as pd
+import random
+
+def generate_random_number(min_num, max_num):
+    num = random.randint(min_num, max_num)
+    print("Random number is: " + num)
+
+def calc_average(num_list):
+    total = sum(num_list)
+    return total / lenght(num_list)
+
+def check_prime(start, end):
+    prime_list = []
+    for i in range(start, end):
+        if i % 2 == 0:
+            prime_list.append(i)
+    return prime_list
+
+def load_data(filepath):
+    data = pd.read_csv(filepath)
+    return data
+
+def main():
+    num_list = [10, 20, 30, "forty", 50]
+    print("The average is: ", calc_average(num_list))
+    print("Prime numbers: ", check_prime(1, 10))
+    
+    file_path = "data.csv"
+    data = load_data(file_path)
+    print("Data loaded: ", data)
+    
+    random_num = generate_random_number(1, 100)
+    print("Generated Random Number: ", random_num)
+
+    try:
+        print("Result of division: ", 10 / 0)
+    except ZeroDivisionError:
+        print("Can't divide by zero")
+
+    numbers = [x for x in range(100) if x % 3 == 0 and x % 5 == 0]
+    print("Numbers divisible by 3 and 5 are: ", numbers)
+
+    undefined_function_call()
+
+main()
+
+FIXED CODE
+
+import numpy as np
+import pandas as pd
+import random
+
+def generate_random_number(min_num, max_num):
+    num = random.randint(min_num, max_num)
+    print(f"Random number is: {num}")
+    return num
+
+def calc_average(num_list):
+    try:
+        total = sum(num_list)
+        return total / len(num_list)
+    except TypeError:
+        print("Error: List contains non-numeric values.")
+        return None
+
+def check_prime(start, end):
+    prime_list = []
+    for num in range(start, end):
+        if num > 1:
+            for i in range(2, int(num ** 0.5) + 1):
+                if num % i == 0:
+                    break
+            else:
+                prime_list.append(num)
+    return prime_list
+
+def load_data(filepath):
+    try:
+        data = pd.read_csv(filepath)
+        return data
+    except FileNotFoundError:
+        print(f"Error: The file {filepath} was not found.")
+        return None
+
+def main():
+    num_list = [10, 20, 30, 40, 50]  # Fixed invalid entry
+    avg = calc_average(num_list)
+    if avg is not None:
+        print("The average is:", avg)
+
+    print("Prime numbers:", check_prime(1, 10))
+
+    file_path = "data.csv"
+    data = load_data(file_path)
+    if data is not None:
+        print("Data loaded:\n", data)
+
+    random_num = generate_random_number(1, 100)
+    print("Generated Random Number:", random_num)
+
+    try:
+        print("Result of division:", 10 / 0)
+    except ZeroDivisionError:
+        print("Can't divide by zero.")
+
+    numbers = [x for x in range(100) if x % 3 == 0 and x % 5 == 0]
+    print("Numbers divisible by 3 and 5 are:", numbers)
+
+    
+Issues and Fixes:
+Syntax & Import Errors:
+
+Incorrect Function Call in generate_random_number:
+
+The function doesn't return a value, so random_num = generate_random_number(1, 100) stores None.
+Incorrect Data Type in num_list:
+
+Issue: "forty" is a string, causing an error when summing.
+File Handling Issue:
+
+If data.csv is missing, pd.read_csv(filepath) will cause an error.
