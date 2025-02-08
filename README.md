@@ -169,3 +169,8 @@ data = [{'Geeks': 'dataframe', 'For': 'using', 'geeks': 'list'},
 
 df = pd.DataFrame.from_dict(data) 
 print(df)
+
+
+AI is a branch of computer science that focuses on creating intelligent systems capable of reasoning, learning, and decision-making.Artificial Intelligence (AI) is a field of computer science that enables machines to simulate human intelligence, including reasoning, learning, and decision-making. Key AI techniques include Machine Learning (ML), which allows machines to learn from data, and Natural Language Processing (NLP), which helps computers understand human language. AI is also used in automation, robotics, and machine vision for improving efficiency and productivity. Its applications span various fields, including astronomy, healthcare, gaming, finance, and cybersecurity. AI enhances medical diagnoses, automates financial processes, and strengthens data security. However, challenges such as ethical concerns, the complexity of human language, and security risks remain. Despite its limitations, AI continues to transform industries, making processes smarter and more efficient.
+
+Chat GPT provides an insightful and useful analysis coming straight to the point without external disturbances and summarized everything by dividing into sectors and defining it in a line which saves time and is easy to understand.Other AI reponses were not that satisfactory because they seemed complex and external information was included .The missing points are it fails to justify or provide examples.
