@@ -112,3 +112,60 @@ def generate_password(length=12):
     return password
 
 print(generate_password())
+
+
+import numpy as np
+arr=["1","2","3","4","5"]
+a=np.array(arr)
+print(a)
+
+import numpy as np
+
+a=np.zeros(3)
+print(a)
+
+a=np.identity(3)
+print(a)
+
+import numpy as np
+
+array=np.array([1,2,3,4,5])
+a=np.amax(array)
+ 
+print(a)
+
+import numpy as np
+
+array=np.array([1,2,3,4,5])
+a=np.amin(array)
+ 
+print(a)
+
+import numpy as np
+
+array=np.array([1,2,3,4,5])
+a=np.mean(array)
+ 
+print(a)
+
+import numpy as np
+
+array=np.array([1,2,3,4,5])
+a=np.unique(array)
+ 
+print(a)
+import numpy as np
+
+array=np.random.random((5,5))
+print(array)
+import numpy as np
+
+array=np.array([1,2,3,4,5])
+
+print(array[1:2])
+import pandas as pd 
+data = [{'Geeks': 'dataframe', 'For': 'using', 'geeks': 'list'}, 
+		{'Geeks':10, 'For': 20, 'geeks': 30}] 
+
+df = pd.DataFrame.from_dict(data) 
+print(df)
